@@ -179,11 +179,13 @@ as a string.
   `Integer` values in this range.
   - String encoding: Integer portion of the JSON Number per
     [RFC 7159, Section 6](https://tools.ietf.org/html/rfc7159#section-6)
-- `String` - Sequence of printable Unicode characters.
+- `String` - Sequence of Unicode characters.
 - `Binary` - Sequence of bytes.
   - String encoding: Base64 encoding per
     [RFC4648](https://tools.ietf.org/html/rfc4648).
 - `Map` - `String`-indexed dictionary of `Any`-typed values.
+  - The `String`-index MUST only contain printable Unicode characters and SHOULD
+    only contain alphanumeric characters.
   - String encoding: JSON Object per
     [RFC 7159, Section 4](https://tools.ietf.org/html/rfc7159#section-4)
 - `URI-reference` - Uniform resource identifier reference.
